@@ -5,7 +5,11 @@ import content from './SurveyContent.js';
 function Survey() {
 	let [page, setPage] = useState(0);
 	
-	return <SurveyQuestion question={content[page].question} answers={content[page].answers} />;
+	const handleClick = () => {
+		setPage(prevPage => (prevPage + 1));
+	}
+	
+	return <SurveyQuestion question={content[page].question} answers={content[page].answers} handleClick={handleClick} />;
 }
 
 export default Survey;

@@ -1,5 +1,5 @@
 function Answer(props) {
-	return <button>{props.answer}</button>;
+	return <button onClick={props.handleClick}>{props.answer}</button>;
 }
 
 export default Answer;
