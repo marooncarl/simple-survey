@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import SurveyQuestion from './SurveyQuestion.js';
+import content from './SurveyContent.js';
 
 function Survey() {
-	return <SurveyQuestion question='Which food do you like the most?' />;
+	let [page, setPage] = useState(0);
+	
+	return <SurveyQuestion question={content[page].question} />;
 }
 
 export default Survey;
