@@ -1,5 +1,6 @@
 const content = [
 	{
+		resultHeader: 'Food',
 		question: 'Which food do you like the most?',
 		answers: [
 			'Pizza',
@@ -10,6 +11,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Music',
 		question: 'Which music style do you like best?',
 		answers: [
 			'Classical',
@@ -20,6 +22,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Color',
 		question: 'Which color do you prefer?',
 		answers: [
 			'Red',
@@ -31,6 +34,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Historical Period',
 		question: 'Which is your favorite historical period?',
 		answers: [
 			'Ancient',
@@ -40,6 +44,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Entertainment',
 		question: 'Which activity is the most fun?',
 		answers: [
 			'Reading books',
@@ -49,6 +54,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Surveys',
 		question: 'Like taking surveys?',
 		answers: [
 			'Yes',
@@ -56,6 +62,7 @@ const content = [
 		]
 	},
 	{
+		resultHeader: 'Topic',
 		question: 'Which topic is the most interesting?',
 		answers: [
 			'Food',

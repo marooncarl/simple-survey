@@ -19,7 +19,11 @@ function Survey() {
 	if (page < content.length) {
 		return <SurveyQuestion question={content[page].question} answers={content[page].answers} handleClick={handleClick} />;
 	} else {
-		return <SurveyResults answers={answers}/>;
+		let headers = [];
+		for (let i = 0; i < content.length; i++) {
+			headers.push(content[i].resultHeader);
+		}
+		return <SurveyResults answers={answers} headers={headers}/>;
 	}
 }
 

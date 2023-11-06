@@ -1,7 +1,7 @@
 function SurveyResults(props) {
 	let answers = [];
 	for (let i = 0; i < props.answers.length; i++) {
-		answers.push(<li>{props.answers[i]}</li>);
+		answers.push(<li>{props.headers[i]}: {props.answers[i]}</li>);
 	}
 	
 	return <>
