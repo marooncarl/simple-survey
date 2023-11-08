@@ -47,3 +47,28 @@ button {
 	text-align: left;
 	padding: 0.5em;
 }
+
+button.red {
+	background: #f33;
+}
+
+button.blue {
+	background: #33f;
+}
+
+button.green {
+	background: #080;
+}
+
+button.yellow {
+	background: #ff0;
+	color: #33f;
+}
+
+button.orange {
+	background: #f83;
+}
+
+button.purple {
+	background: #808;
+}
