@@ -7,5 +7,16 @@ button {
 	border: 0px;
 	border-radius: 5px;
 	padding: 0.66em;
-	margin: 1em;
+	margin: 1em auto;
+	width: 12em;
+}
+
+.answer-list {
+	width: 40em;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.question {
+	text-align: center;
 }

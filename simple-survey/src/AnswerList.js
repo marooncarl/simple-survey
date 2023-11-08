@@ -6,7 +6,7 @@ function AnswerList(props) {
 		answers.push(<Answer answer={props.answers[i]} handleClick={props.handleClick} />);
 	}
 	
-	return <>{answers}</>;
+	return <div className='answer-list'>{answers}</div>;
 }
 
 export default AnswerList;
