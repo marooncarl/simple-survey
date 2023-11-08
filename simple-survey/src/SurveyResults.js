@@ -4,11 +4,11 @@ function SurveyResults(props) {
 		answers.push(<li>{props.headers[i]}: {props.answers[i]}</li>);
 	}
 	
-	return <>
+	return <div className='results'>
 		<p>You answered all of the questions!  Huzzah!</p>
 		<p>Here's what you answered:</p>
 		<ul>{answers}</ul>
-	</>;
+	</div>;
 }
 
 export default SurveyResults;

@@ -1,3 +1,8 @@
+* {
+	font-family: 'Arial';
+	text-align: center;
+}
+
 button {
 	display: block;
 	background: gray;
@@ -18,9 +23,27 @@ button {
 }
 
 .question {
-	text-align: center;
 	font-size: 1.5em;
-	font-family: 'Arial';
 	padding-top: 3em;
 	padding-bottom: 1em;
+}
+
+.results {
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 3em;
+}
+
+.results p {
+	padding-bottom: 1em;
+}
+
+.results ul {
+	width: 20em;
+	margin: 0 auto;
+}
+
+.results ul li {
+	text-align: left;
+	padding: 0.5em;
 }
