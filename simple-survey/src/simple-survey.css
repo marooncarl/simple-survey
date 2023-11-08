@@ -2,7 +2,7 @@ button {
 	display: block;
 	background: gray;
 	color: white;
-	font-size: 0.9em;
+	font-size: 1.2em;
 	font-weight: bold;
 	border: 0px;
 	border-radius: 5px;
@@ -19,4 +19,8 @@ button {
 
 .question {
 	text-align: center;
+	font-size: 1.5em;
+	font-family: 'Arial';
+	padding-top: 3em;
+	padding-bottom: 1em;
 }
