@@ -14,6 +14,19 @@ button {
 	padding: 0.66em;
 	margin: 1em auto;
 	width: 12em;
+	transition: 0.4s;
+}
+
+button:hover {
+	background: #8af;
+	transition: 0.1s;
+	transform: scale(1.02);
+}
+
+button:active {
+	background: #028;
+	transition: 0.1s;
+	transform: scale(0.98);
 }
 
 .answer-list {
