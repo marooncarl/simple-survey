@@ -26,6 +26,10 @@ function Answer(props) {
 			break;
 	}
 	
+	if (!props.isVisible) {
+		answerClass += ' hidden';
+	}
+	
 	return <button className={answerClass} onClick={() => props.handleClick(props.answer)}>{props.answer}</button>;
 }
 

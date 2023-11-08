@@ -29,6 +29,10 @@ button:active {
 	transform: scale(0.98);
 }
 
+button.hidden {
+	transform: scale(0);
+}
+
 .answer-list {
 	width: 40em;
 	margin: 0 auto;
