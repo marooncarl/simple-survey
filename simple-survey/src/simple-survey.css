@@ -65,22 +65,58 @@ button.red {
 	background: #f33;
 }
 
-button.blue {
-	background: #45f;
+button.red:hover {
+	background: #f88;
+}
+
+button.red:active {
+	background: #800;
 }
 
 button.green {
 	background: #080;
 }
 
+button.green:hover {
+	background: #6b6;
+}
+
+button.green:active {
+	background: #040;
+}
+
 button.yellow {
 	background: #fd0;
+}
+
+button.yellow:hover {
+	background: #fe6;
+}
+
+button.yellow:active {
+	background: #b90;
 }
 
 button.orange {
 	background: #f83;
 }
 
+button.orange:hover {
+	background: #fb8;
+}
+
+button.orange:active {
+	background: #a50;
+}
+
 button.purple {
-	background: #808;
+	background: #80b;
+}
+
+button.purple:hover {
+	background: #c7f;
+}
+
+button.purple:active {
+	background: #608;
 }
