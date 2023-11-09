@@ -7,10 +7,12 @@ function Survey() {
 	let [page, setPage] = useState(0);
 	let [answers, setAnswers] = useState([]);
 	let [buttonCount, setButtonCount] = useState(10);
+	let [isClearing, setIsClearing] = useState(false);
 	
 	useEffect(() => {
 		if (page < content.length) {
 			setButtonCount(0);
+			setIsClearing(false);
 			let buttonTimer = 0;
 			let timesAdded = 0;
 			
@@ -38,6 +40,7 @@ function Survey() {
 			newAnswers.push(answer);
 			return newAnswers;
 		});
+		setIsClearing(true);
 		
 		let hideTimer = 0;
 		let timesRemoved = 0;
@@ -55,7 +58,14 @@ function Survey() {
 	}
 	
 	if (page < content.length) {
-		return <SurveyQuestion questionId={page} question={content[page].question} answers={content[page].answers} handleClick={handleClick} buttonCount={buttonCount} />;
+		return <SurveyQuestion
+			questionId={page}
+			question={content[page].question}
+			answers={content[page].answers}
+			handleClick={handleClick}
+			buttonCount={buttonCount}
+			isClearing={isClearing}
+		/>;
 	} else {
 		let headers = [];
 		for (let i = 0; i < content.length; i++) {
