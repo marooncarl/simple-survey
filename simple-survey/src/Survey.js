@@ -42,7 +42,7 @@ function Survey() {
 	}
 	
 	if (page < content.length) {
-		return <SurveyQuestion question={content[page].question} answers={content[page].answers} handleClick={handleClick} buttonCount={buttonCount} />;
+		return <SurveyQuestion questionId={page} question={content[page].question} answers={content[page].answers} handleClick={handleClick} buttonCount={buttonCount} />;
 	} else {
 		let headers = [];
 		for (let i = 0; i < content.length; i++) {
