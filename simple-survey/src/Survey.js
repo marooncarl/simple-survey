@@ -38,7 +38,20 @@ function Survey() {
 			newAnswers.push(answer);
 			return newAnswers;
 		});
-		setPage(prevPage => (prevPage + 1));
+		
+		let hideTimer = 0;
+		let timesRemoved = 0;
+		
+		const hideButton = () => {
+			setButtonCount(prev => Math.max(0, prev - 1));
+			timesRemoved += 1;
+			
+			if (timesRemoved >= content[page].answers.length) {
+				clearInterval(hideTimer);
+				setTimeout(() => setPage(prevPage => (prevPage + 1)), 500);
+			}
+		}
+		hideTimer = setInterval(hideButton, 100);
 	}
 	
 	if (page < content.length) {
