@@ -1,11 +1,18 @@
 * {
+	--red: #f33;
+	--green: #080;
+	--blue: #45f;
+	--yellow: #fd0;
+	--orange: #f83;
+	--purple: #80b;
+	
 	font-family: 'Arial';
 	text-align: center;
 }
 
 button {
 	display: block;
-	background: #45f;
+	background: var(--blue);
 	color: white;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -27,6 +34,11 @@ button:active {
 	background: #028;
 	transition: 0.1s;
 	transform: scale(0.98);
+}
+
+button:disabled {
+	background: var(--blue);
+	transform: scale(1.0);
 }
 
 button.hidden {
@@ -66,7 +78,7 @@ button.hidden {
 }
 
 button.red {
-	background: #f33;
+	background: var(--red);
 }
 
 button.red:hover {
@@ -77,8 +89,12 @@ button.red:active {
 	background: #800;
 }
 
+button.red:disabled {
+	background: var(--red);
+}
+
 button.green {
-	background: #080;
+	background: var(--green);
 }
 
 button.green:hover {
@@ -89,8 +105,12 @@ button.green:active {
 	background: #040;
 }
 
+button.green:disabled {
+	background: var(--green);
+}
+
 button.yellow {
-	background: #fd0;
+	background: var(--yellow);
 }
 
 button.yellow:hover {
@@ -101,8 +121,12 @@ button.yellow:active {
 	background: #b90;
 }
 
+button.yellow:disabled {
+	background: var(--yellow);
+}
+
 button.orange {
-	background: #f83;
+	background: var(--orange);
 }
 
 button.orange:hover {
@@ -113,8 +137,12 @@ button.orange:active {
 	background: #a50;
 }
 
+button.orange:disabled {
+	background: var(--orange);
+}
+
 button.purple {
-	background: #80b;
+	background: var(--purple);
 }
 
 button.purple:hover {
@@ -123,4 +151,8 @@ button.purple:hover {
 
 button.purple:active {
 	background: #608;
+}
+
+button.purple:disabled {
+	background: var(--purple);
 }
