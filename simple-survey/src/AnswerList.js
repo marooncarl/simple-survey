@@ -14,7 +14,7 @@ function AnswerList(props) {
 			visible = (i >= props.answers.length - props.buttonCount ? true : false);
 		}
 		
-		answers.push(<Answer key={answerKey} answer={props.answers[i]} handleClick={props.handleClick} isVisible={visible} />);
+		answers.push(<Answer key={answerKey} answer={props.answers[i]} handleClick={props.handleClick} isVisible={visible} isDisabled={props.isClearing} />);
 	}
 	
 	return <div className='answer-list'>{answers}</div>;
