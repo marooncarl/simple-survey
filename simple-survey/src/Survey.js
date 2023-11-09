@@ -8,6 +8,7 @@ function Survey() {
 	let [answers, setAnswers] = useState([]);
 	let [buttonCount, setButtonCount] = useState(10);
 	let [isClearing, setIsClearing] = useState(false);
+	let [lingeringAnswer, setLingeringAnswer] = useState('');
 	
 	useEffect(() => {
 		if (page < content.length) {
@@ -40,6 +41,7 @@ function Survey() {
 			newAnswers.push(answer);
 			return newAnswers;
 		});
+		setLingeringAnswer(answer);
 		setIsClearing(true);
 		
 		let hideTimer = 0;
@@ -51,7 +53,8 @@ function Survey() {
 			
 			if (timesRemoved >= content[page].answers.length) {
 				clearInterval(hideTimer);
-				setTimeout(() => setPage(prevPage => (prevPage + 1)), 500);
+				setTimeout(() => setLingeringAnswer(''), 1000);
+				setTimeout(() => setPage(prevPage => (prevPage + 1)), 1500);
 			}
 		}
 		hideTimer = setInterval(hideButton, 100);
@@ -65,6 +68,7 @@ function Survey() {
 			handleClick={handleClick}
 			buttonCount={buttonCount}
 			isClearing={isClearing}
+			lingeringAnswer={lingeringAnswer}
 		/>;
 	} else {
 		let headers = [];
