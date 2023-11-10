@@ -108,6 +108,7 @@ button.hidden {
 
 .results ul li.hidden {
 	color: transparent;
+	padding-left: 5em;
 }
 
 button.red {
