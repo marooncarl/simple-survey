@@ -65,6 +65,11 @@ button.hidden {
 
 .results p {
 	padding-bottom: 1em;
+	transition: 0.5s;
+}
+
+.results p.hidden {
+	color: transparent;
 }
 
 .results ul {
@@ -75,6 +80,11 @@ button.hidden {
 .results ul li {
 	text-align: left;
 	padding: 0.5em;
+	transition: 0.5s;
+}
+
+.results ul li.hidden {
+	color: transparent;
 }
 
 button.red {

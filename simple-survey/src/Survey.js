@@ -12,6 +12,8 @@ function Survey() {
 	
 	useEffect(() => {
 		if (page < content.length) {
+			// Reveal answers one by one
+			
 			setButtonCount(0);
 			setIsClearing(false);
 			let buttonTimer = 0;
@@ -31,11 +33,31 @@ function Survey() {
 				clearInterval(buttonTimer);
 			}
 		} else {
-			return () => {}
+			// Reveal results one by one
+			
+			setButtonCount(0);
+			let resultTimer = 0;
+			let timesAdded = 0;
+			
+			const showResult = () => {
+				setButtonCount(prev => prev + 1);
+				timesAdded += 1;
+				
+				if (timesAdded >= content.length + 1) {
+					clearInterval(resultTimer);
+				}
+			}
+			resultTimer = setInterval(showResult, 500);
+			
+			return () => {
+				clearInterval(resultTimer);
+			}
 		}
 	}, [page]);
 	
 	const handleClick = (answer) => {
+		// Save answer and hide buttons one by one
+		
 		setAnswers(prevAnswers => {
 			let newAnswers = [...prevAnswers];
 			newAnswers.push(answer);
@@ -75,7 +97,7 @@ function Survey() {
 		for (let i = 0; i < content.length; i++) {
 			headers.push(content[i].resultHeader);
 		}
-		return <SurveyResults answers={answers} headers={headers}/>;
+		return <SurveyResults answers={answers} headers={headers} resultCount={buttonCount} />;
 	}
 }
 
