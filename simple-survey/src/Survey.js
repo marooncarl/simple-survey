@@ -38,19 +38,32 @@ function Survey() {
 			setButtonCount(0);
 			let resultTimer = 0;
 			let timesAdded = 0;
+			let hasStartedInterval = false;
 			
 			const showResult = () => {
 				setButtonCount(prev => prev + 1);
 				timesAdded += 1;
 				
-				if (timesAdded >= content.length + 1) {
+				// Use different timings for intro and result list
+				if (timesAdded == 1) {
+					resultTimer = setTimeout(showResult, 1000);
+				
+				} else if (timesAdded == 2) {
+					resultTimer = setInterval(showResult, 500);
+					hasStartedInterval = true;
+				
+				} else if (timesAdded >= content.length + 1) {
 					clearInterval(resultTimer);
 				}
 			}
-			resultTimer = setInterval(showResult, 500);
 			
+			resultTimer = setTimeout(showResult, 2000);
 			return () => {
-				clearInterval(resultTimer);
+				if (!hasStartedInterval) {
+					clearTimeout(resultTimer);
+				} else {
+					clearInterval(resultTimer);
+				}
 			}
 		}
 	}, [page]);
