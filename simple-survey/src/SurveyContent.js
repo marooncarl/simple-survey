@@ -3,7 +3,7 @@ const content = [
 		question: 'Which food do you like the most?',
 		answers: [
 			'Pizza',
-			'Burger',
+			'Burgers',
 			'Noodles',
 			'Rice',
 			'Soup'
