@@ -58,6 +58,11 @@ button.hidden {
 	animation: 1s fade-in;
 }
 
+.question.hidden {
+	color: transparent;
+	transition: 0.5s;
+}
+
 @keyframes fade-in {
 	from {
 		color: transparent;

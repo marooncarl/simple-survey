@@ -1,8 +1,10 @@
 import AnswerList from './AnswerList.js';
 
 function SurveyQuestion(props) {
+	let questionClass = 'question' + ((props.isClearing && props.lingeringAnswer == '') ? ' hidden' : '');
+	
 	return <>
-		<p className='question' key={'q' + props.questionId} >{props.question}</p>
+		<p className={questionClass} key={'q' + props.questionId} >{props.question}</p>
 		<AnswerList
 			answers={props.answers}
 			handleClick={props.handleClick}
