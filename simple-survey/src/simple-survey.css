@@ -43,6 +43,7 @@ button:disabled {
 
 button.hidden {
 	transform: scale(0);
+	opacity: 0;
 }
 
 .answer-list {
