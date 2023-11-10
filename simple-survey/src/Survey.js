@@ -106,11 +106,7 @@ function Survey() {
 			lingeringAnswer={lingeringAnswer}
 		/>;
 	} else {
-		let headers = [];
-		for (let i = 0; i < content.length; i++) {
-			headers.push(content[i].resultHeader);
-		}
-		return <SurveyResults answers={answers} headers={headers} resultCount={buttonCount} />;
+		return <SurveyResults answers={answers} resultCount={buttonCount} />;
 	}
 }
 
