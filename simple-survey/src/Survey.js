@@ -4,14 +4,21 @@ import SurveyResults from './SurveyResults.js';
 import content from './SurveyContent.js';
 
 function Survey() {
-	let [page, setPage] = useState(0);
+	let [page, setPage] = useState(-1);
 	let [answers, setAnswers] = useState([]);
-	let [buttonCount, setButtonCount] = useState(10);
+	let [buttonCount, setButtonCount] = useState(0);
 	let [isClearing, setIsClearing] = useState(false);
 	let [lingeringAnswer, setLingeringAnswer] = useState('');
 	let [hasShownIntro, setHasShownIntro] = useState(false);
 	
 	useEffect(() => {
+		if (page < 0) {
+			// Intro page
+			
+			let introTimer = setTimeout(() => setButtonCount(1), 500);
+			return () => clearTimeout(introTimer);
+		}
+		
 		if (page < content.length) {
 			// Reveal answers one by one
 			
@@ -97,7 +104,14 @@ function Survey() {
 	}
 	
 	const startSurvey = (answer) => {
-		setHasShownIntro(true);
+		// Pressed start
+		
+		setIsClearing(true);
+		setTimeout(() => setButtonCount(0), 500);
+		setTimeout(() => {
+			setHasShownIntro(true);
+			setPage(prevPage => (prevPage + 1));
+		}, 1500);
 	}
 	
 	if (!hasShownIntro) {
