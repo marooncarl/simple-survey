@@ -4,9 +4,9 @@ const content = [
 		answers: [
 			'Pizza',
 			'Burgers',
-			'Noodles',
-			'Rice',
-			'Soup'
+			'Pasta',
+			'Salads',
+			'Desserts'
 		]
 	},
 	{
