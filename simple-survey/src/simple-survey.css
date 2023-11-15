@@ -73,6 +73,11 @@ button.hidden {
 	animation: 1s fade-in;
 }
 
+.intro.hidden {
+	color: transparent;
+	transition: 0.5s;
+}
+
 @keyframes fade-in {
 	from {
 		color: transparent;
