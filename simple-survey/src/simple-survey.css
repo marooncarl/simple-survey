@@ -64,6 +64,15 @@ button.hidden {
 	transition: 0.5s;
 }
 
+.intro-box {
+	padding-top: 5em;
+}
+
+.intro {
+	font-size: 1.5em;
+	animation: 1s fade-in;
+}
+
 @keyframes fade-in {
 	from {
 		color: transparent;

@@ -9,6 +9,7 @@ function Survey() {
 	let [buttonCount, setButtonCount] = useState(10);
 	let [isClearing, setIsClearing] = useState(false);
 	let [lingeringAnswer, setLingeringAnswer] = useState('');
+	let [hasShownIntro, setHasShownIntro] = useState(false);
 	
 	useEffect(() => {
 		if (page < content.length) {
@@ -95,7 +96,27 @@ function Survey() {
 		hideTimer = setInterval(hideButton, 100);
 	}
 	
-	if (page < content.length) {
+	const startSurvey = (answer) => {
+		setHasShownIntro(true);
+	}
+	
+	if (!hasShownIntro) {
+		return <>
+			<div class='intro-box'>
+				<p class='intro'>Welcome to my simple survey!</p>
+				<p class='intro'>Pick your favorite thing out of a variety of topics!</p>
+			</div>
+			<SurveyQuestion
+				questionId={-1}
+				question={''}
+				answers={['Take Survey']}
+				handleClick={startSurvey}
+				buttonCount={buttonCount}
+				isClearing={isClearing}
+				lingeringAnswer={''}
+			/>
+		</>;
+	} else if (page < content.length) {
 		return <SurveyQuestion
 			questionId={page}
 			question={content[page].question}
