@@ -15,8 +15,10 @@ function Survey() {
 		if (page < 0) {
 			// Intro page
 			
-			let introTimer = setTimeout(() => setButtonCount(1), 500);
-			return () => clearTimeout(introTimer);
+			let introTimer = setTimeout(() => setButtonCount(1), 2000);
+			return () => {
+				clearTimeout(introTimer);
+			};
 		}
 		
 		if (page < content.length) {
@@ -116,10 +118,11 @@ function Survey() {
 	
 	if (!hasShownIntro) {
 		let introClass = 'intro' + (isClearing && buttonCount == 0 ? ' hidden' : '');
+		let descClass = introClass + (isClearing && buttonCount == 0 ? '' : ' desc');
 		return <>
 			<div class='intro-box'>
 				<p class={introClass}>Welcome to my simple survey!</p>
-				<p class={introClass}>Pick your favorite thing for each topic!</p>
+				<p class={descClass}>Pick your favorite thing for each topic!</p>
 			</div>
 			<SurveyQuestion
 				questionId={-1}

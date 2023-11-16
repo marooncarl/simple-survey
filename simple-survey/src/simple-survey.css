@@ -69,13 +69,17 @@ button.hidden {
 }
 
 .intro {
+	color: transparent;
 	font-size: 1.5em;
-	animation: 1s fade-in;
+	animation: 1s fade-in forwards;
 }
 
 .intro.hidden {
-	color: transparent;
-	transition: 0.5s;
+	animation: 1s fade-out forwards;
+}
+
+.intro.desc {
+	animation-delay: 1.5s;
 }
 
 @keyframes fade-in {
@@ -85,6 +89,16 @@ button.hidden {
 	
 	to {
 		color: black;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		color: black;
+	}
+	
+	to {
+		color: transparent;
 	}
 }
 
