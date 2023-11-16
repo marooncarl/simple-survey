@@ -119,7 +119,7 @@ function Survey() {
 		return <>
 			<div class='intro-box'>
 				<p class={introClass}>Welcome to my simple survey!</p>
-				<p class={introClass}>Pick your favorite thing out of a variety of topics!</p>
+				<p class={introClass}>Pick your favorite thing for each topic!</p>
 			</div>
 			<SurveyQuestion
 				questionId={-1}
