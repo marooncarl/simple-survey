@@ -24,7 +24,7 @@ function SurveyResults(props) {
 				break;
 			
 			case 5:  // Surveys
-				answerText = (props.answers[i] == 'Yes' ? 'Taking surveys' : 'Not taking surveys');
+				answerText = (props.answers[i] === 'Yes' ? 'Taking surveys' : 'Not taking surveys');
 				break;
 			
 			default:

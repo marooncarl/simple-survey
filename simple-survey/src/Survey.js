@@ -117,8 +117,8 @@ function Survey() {
 	}
 	
 	if (!hasShownIntro) {
-		let introClass = 'intro' + (isClearing && buttonCount == 0 ? ' hidden' : '');
-		let descClass = introClass + (isClearing && buttonCount == 0 ? '' : ' desc');
+		let introClass = 'intro' + (isClearing && buttonCount === 0 ? ' hidden' : '');
+		let descClass = introClass + (isClearing && buttonCount === 0 ? '' : ' desc');
 		return <>
 			<div class='intro-box'>
 				<p class={introClass}>Welcome to my simple survey!</p>
