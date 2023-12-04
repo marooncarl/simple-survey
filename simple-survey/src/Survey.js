@@ -55,10 +55,10 @@ function Survey() {
 				timesAdded += 1;
 				
 				// Use different timings for intro and result list
-				if (timesAdded == 1) {
+				if (timesAdded === 1) {
 					resultTimer = setTimeout(showResult, 1000);
 				
-				} else if (timesAdded == 2) {
+				} else if (timesAdded === 2) {
 					resultTimer = setInterval(showResult, 500);
 					hasStartedInterval = true;
 				

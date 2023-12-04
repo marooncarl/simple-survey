@@ -19,7 +19,11 @@ function Answer(props) {
 		answerClass += ' hidden';
 	}
 	
-	return <button className={answerClass} onClick={() => props.handleClick(props.answer)} disabled={props.isDisabled}>{props.answer}</button>;
+	return <button
+		className={answerClass}
+		onClick={() => props.handleClick(props.answer)}
+		disabled={props.isDisabled}>{props.answer}
+	</button>;
 }
 
 export default Answer;

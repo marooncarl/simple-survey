@@ -31,7 +31,7 @@ function SurveyResults(props) {
 		answers.push(<li key={'ra' + i} className={resultClass}>{answerText}</li>);
 	}
 	
-	let introClass = (props.resultCount == 0 ? 'big' : '');
+	let introClass = (props.resultCount === 0 ? 'big' : '');
 	let headerClass = (props.resultCount < 1 ? 'hidden' : '');
 	
 	return <div className='results'>
