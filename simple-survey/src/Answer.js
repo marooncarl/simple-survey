@@ -1,28 +1,17 @@
 function Answer(props) {
-	let answerClass = 'plain';
+	let answerClass = '';
 	switch (props.answer) {
 		case 'Red':
-			answerClass = 'red';
-			break;
-		
 		case 'Blue':
-			answerClass = 'blue';
-			break;
-		
 		case 'Green':
-			answerClass = 'green';
-			break;
-		
 		case 'Yellow':
-			answerClass = 'yellow';
-			break;
-		
 		case 'Orange':
-			answerClass = 'orange';
+		case 'Purple':
+			answerClass = props.answer.toLowerCase();
 			break;
 		
-		case 'Purple':
-			answerClass = 'purple';
+		default:
+			answerClass = 'plain';
 			break;
 	}
 	
