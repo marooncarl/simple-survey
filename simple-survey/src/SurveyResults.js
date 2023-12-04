@@ -26,6 +26,10 @@ function SurveyResults(props) {
 			case 5:  // Surveys
 				answerText = (props.answers[i] == 'Yes' ? 'Taking surveys' : 'Not taking surveys');
 				break;
+			
+			default:
+				answerText = '';
+				break;
 		}
 		
 		answers.push(<li key={'ra' + i} className={resultClass}>{answerText}</li>);
