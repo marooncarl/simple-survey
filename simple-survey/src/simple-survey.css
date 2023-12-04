@@ -26,8 +26,14 @@ button {
 
 button:hover {
 	background: #8af;
-	transition: 0.1s;
+	transition: 0.08s;
 	transform: scale(1.02);
+}
+
+button:focus {
+	transition: 0.08s;
+	outline: 3px solid var(--blue);
+	outline-offset: 3px;
 }
 
 button:active {
