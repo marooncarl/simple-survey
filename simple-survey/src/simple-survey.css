@@ -27,7 +27,6 @@ button {
 button:hover {
 	background: #8af;
 	transition: 0.08s;
-	transform: scale(1.02);
 }
 
 button:focus {
@@ -45,6 +44,7 @@ button:active {
 button:disabled {
 	background: var(--blue);
 	transform: scale(1.0);
+	outline: none;
 }
 
 button.hidden {
